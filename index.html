@@ -15,17 +15,33 @@
       padding: 0 50px;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    video {
+    #localVideo{
+      background: white;
+      background-image: url(https://www.kirupa.com/images/orange_logo_svg.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 200px;
+      height: 150px;
+      top: 10px;
+      right: 20px;
+      box-shadow: 0 5px 10px 0 rgba(0,0,0,0.2);
+      border-radius: 30px;
+      position: fixed;
+    }
+    #remoteVideo{
       background: white;
       background-image: url(https://www.kirupa.com/images/orange_logo_svg.svg);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
-      max-width: calc(50% - 5%);
       margin: 0 5%;
       box-sizing: border-box;
-      border-radius: 2px;
+      border-radius: 30px;
       padding: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: fixed;
     }
     .copy {
       position: fixed;
@@ -38,9 +54,8 @@
   </style>
 </head>
 <body>
-  <div class="copy">Send your URL to a friend to start a video call</div>
-  <video id="localVideo" autoplay muted></video>
   <video id="remoteVideo" autoplay></video>
+  <video id="localVideo" autoplay muted></video>
   <script src="script.js"></script>
 </body>
 </html>
